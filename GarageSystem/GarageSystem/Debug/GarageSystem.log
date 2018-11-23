@@ -1,4 +1,6 @@
 ﻿  Garage.cpp
+c:\users\timmi\source\repos\garagesystem\garagesystem\garage.cpp(15): warning C4101: 'i': unreferenced local variable
+  GarageSystem.cpp
   Vehicle.cpp
   Generating Code...
   GarageSystem.vcxproj -> C:\Users\timmi\source\repos\GarageSystem\Debug\GarageSystem.exe
