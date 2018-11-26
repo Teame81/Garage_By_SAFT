@@ -151,13 +151,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Bike.h" />
+    <ClInclude Include="Bus.h" />
+    <ClInclude Include="Car.h" />
     <ClInclude Include="Garage.h" />
+    <ClInclude Include="Lorrey.h" />
+    <ClInclude Include="Motorcycle.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Vehicle.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Bike.cpp" />
+    <ClCompile Include="Bus.cpp" />
+    <ClCompile Include="Car.cpp" />
     <ClCompile Include="Garage.cpp" />
     <ClCompile Include="GarageSystem.cpp" />
+    <ClCompile Include="Lorrey.cpp" />
+    <ClCompile Include="Motorcycle.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

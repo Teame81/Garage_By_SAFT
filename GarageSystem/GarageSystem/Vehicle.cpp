@@ -1,7 +1,9 @@
 #include "pch.h"
 #include "Vehicle.h"
 
-Vehicle::Vehicle()
+string Vehicle::getVehicleType()
 {
+
+	return TypeName[vehicleType];
 
 }

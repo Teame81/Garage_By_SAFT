@@ -9,8 +9,8 @@ class Garage
 {
 public:
 	Garage(int inmaxGarageSize); // The constructor that take how many parking spots you garage will have.
-	bool ParkVehicle(Vehicle); // A method thats try to park a 'Vehicle' and return 'true' if successful.
-	
+	bool AddVehicle(Vehicle); // A method thats try to park a 'Vehicle' and return 'true' if successful.
+	void ListSpots();
 protected:
 	
 private:

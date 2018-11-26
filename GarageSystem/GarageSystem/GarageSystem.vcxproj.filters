@@ -19,9 +19,6 @@
     <Filter Include="Source Files\Classes\Garage">
       <UniqueIdentifier>{ed9049ed-7680-4072-81e8-6431544bbad3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Classes\Vehicle">
-      <UniqueIdentifier>{7940d53e-4785-40bf-9d09-139e885274cc}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -30,8 +27,23 @@
     <ClInclude Include="Garage.h">
       <Filter>Source Files\Classes\Garage</Filter>
     </ClInclude>
+    <ClInclude Include="Bike.h">
+      <Filter>Source Files\Classes\Garage</Filter>
+    </ClInclude>
+    <ClInclude Include="Bus.h">
+      <Filter>Source Files\Classes\Garage</Filter>
+    </ClInclude>
+    <ClInclude Include="Car.h">
+      <Filter>Source Files\Classes\Garage</Filter>
+    </ClInclude>
+    <ClInclude Include="Lorrey.h">
+      <Filter>Source Files\Classes\Garage</Filter>
+    </ClInclude>
+    <ClInclude Include="Motorcycle.h">
+      <Filter>Source Files\Classes\Garage</Filter>
+    </ClInclude>
     <ClInclude Include="Vehicle.h">
-      <Filter>Source Files\Classes\Vehicle</Filter>
+      <Filter>Source Files\Classes\Garage</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -44,8 +56,23 @@
     <ClCompile Include="Garage.cpp">
       <Filter>Source Files\Classes\Garage</Filter>
     </ClCompile>
+    <ClCompile Include="Bike.cpp">
+      <Filter>Source Files\Classes\Garage</Filter>
+    </ClCompile>
+    <ClCompile Include="Bus.cpp">
+      <Filter>Source Files\Classes\Garage</Filter>
+    </ClCompile>
+    <ClCompile Include="Car.cpp">
+      <Filter>Source Files\Classes\Garage</Filter>
+    </ClCompile>
+    <ClCompile Include="Lorrey.cpp">
+      <Filter>Source Files\Classes\Garage</Filter>
+    </ClCompile>
+    <ClCompile Include="Motorcycle.cpp">
+      <Filter>Source Files\Classes\Garage</Filter>
+    </ClCompile>
     <ClCompile Include="Vehicle.cpp">
-      <Filter>Source Files\Classes\Vehicle</Filter>
+      <Filter>Source Files\Classes\Garage</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

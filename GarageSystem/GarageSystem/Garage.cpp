@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Garage.h"
-
+#include <iostream>
+// 
 Garage::Garage(int inMaxGarageSize)
 {
 	maxGarageSize = inMaxGarageSize;
@@ -10,16 +11,23 @@ Garage::Garage(int inMaxGarageSize)
 	}
 }
 
-bool Garage::ParkVehicle(Vehicle inVehicle)
+bool Garage::AddVehicle(Vehicle inVehicle)
 {
-	int i;
-	for (vector<Vehicle*>::iterator i = parkingSpots->begin(); i != parkingSpots->end(); i++)
+	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
 	{
-		//if (parkingSpots->at(i) == NULL) {
-		//
-		//}
+		if (*it == NULL) {
+			*it = &inVehicle;
+		}
 	}
-	//parkingSpots->at(5) = NULL;
+	
 	return true;
 	
+}
+
+void Garage::ListSpots()
+{
+	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
+	{
+		//std::cout << i << ". "; // << it.printAttributes
+	}
 }
