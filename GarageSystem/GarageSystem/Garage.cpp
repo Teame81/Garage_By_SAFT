@@ -16,8 +16,8 @@ bool Garage::addVehicle(Vehicle * inVehicle)
 {
 	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
 	{
-		if (*it == pEmpty) {
-			*it = inVehicle;
+		if ((*it) == pEmpty) {
+			(*it) = inVehicle;
 		}
 	}
 	

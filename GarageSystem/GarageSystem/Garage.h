@@ -18,6 +18,6 @@ protected:
 	
 private:
 	int maxGarageSize{}; // The max size/spots of the garage
-	vector<Vehicle *> * parkingSpots; // A pointer to a vector that contains pointers of 'Vehicle's 
+	vector<Vehicle *> * parkingSpots = new vector<Vehicle *>{}; // A pointer to a vector that contains pointers of 'Vehicle's 
 	
 };
