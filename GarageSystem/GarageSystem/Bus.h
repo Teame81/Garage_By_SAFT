@@ -7,8 +7,8 @@ class Bus : public Vehicle
 {
 public:
 	Bus();
-	Bus(int a, int b) : Seats(a), Floors(b) {}
-	~Bus();
+	Bus(string regnr, string color, int wheels, VehicleType vt, int a, int b);
+
 	void printAttributes(bool fullInfo);
 	int getSeats();
 

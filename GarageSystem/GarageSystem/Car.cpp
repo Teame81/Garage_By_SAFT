@@ -2,8 +2,14 @@
 #include "Car.h"
 
 
-Car::Car()
+Car::Car(string regnr = "TestReg", string color = "TestColor", int wheels = 123, VehicleType vt = CAR, bool inCon = false, bool inElectric = false)
 {
+	RegNum = regnr;
+	Colour = color;
+	Wheels = wheels;
+	vehicleType = vt;
+	Convertable = inCon;
+	Electric = inElectric;
 }
 
 

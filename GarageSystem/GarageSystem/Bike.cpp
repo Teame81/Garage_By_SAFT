@@ -6,6 +6,16 @@ Bike::Bike()
 {
 }
 
+Bike::Bike(string regnr, string color, int wheels, VehicleType vt, bool a, int b)
+{
+	RegNum = regnr;
+	Colour = color;
+	Wheels = wheels;
+	vehicleType = vt;
+	Battery=a;
+	Gears=b;
+}
+
 
 void Bike::printAttributes(bool fullInfo)
 {

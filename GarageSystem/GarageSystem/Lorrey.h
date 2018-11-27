@@ -5,8 +5,8 @@ class Lorry : public Vehicle
 {
 public:
 	Lorry();
-	Lorry(float a, bool b) : Weight(a), Dangerous(b) {}
-	~Lorry();
+	Lorry(string regnr, string color, int wheels, VehicleType vt, float a, bool b);
+
 	void printAttributes(bool fullInfo);
 	float getWeight();
 	bool getDangerous();

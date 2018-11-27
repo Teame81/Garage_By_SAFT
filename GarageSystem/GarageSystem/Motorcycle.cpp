@@ -6,10 +6,18 @@ Motorcycle::Motorcycle()
 {
 }
 
-
-Motorcycle::~Motorcycle()
+Motorcycle::Motorcycle(string regnr, string color, int wheels, VehicleType vt, bool a, bool b)
 {
+	{
+		RegNum = regnr;
+		Colour = color;
+		Wheels = wheels;
+		vehicleType = vt;
+		Heavy = a;
+		Sidecar = b;
+	}
 }
+
 
 void Motorcycle::printAttributes(bool fullInfo)
 {

@@ -6,10 +6,16 @@ Bus::Bus()
 {
 }
 
-
-Bus::~Bus()
+Bus::Bus(string regnr, string color, int wheels, VehicleType vt, int a, int b)
 {
+	RegNum = regnr;
+	Colour = color;
+	Wheels = wheels;
+	vehicleType = vt;
+	Seats = a;
+	Floors = b;
 }
+
 
 void Bus::printAttributes(bool fullInfo)
 {

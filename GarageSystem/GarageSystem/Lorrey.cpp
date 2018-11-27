@@ -6,10 +6,16 @@ Lorry::Lorry()
 {
 }
 
-
-Lorry::~Lorry()
+Lorry::Lorry(string regnr, string color, int wheels, VehicleType vt, float a, bool b)
 {
+	RegNum = regnr;
+	Colour = color;
+	Wheels = wheels;
+	vehicleType = vt;
+	Weight= a; 
+	Dangerous = b;
 }
+
 
 void Lorry::printAttributes(bool fullInfo)
 {

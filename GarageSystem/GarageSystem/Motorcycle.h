@@ -9,8 +9,8 @@ class Motorcycle : public Vehicle
 public:
 
 	Motorcycle();
-	Motorcycle(bool a, bool b) : Heavy(a), Sidecar(b) {}
-	~Motorcycle();
+	Motorcycle(string regnr, string color, int wheels, VehicleType vt, bool a, bool b);
+		
 	void printAttributes(bool fullInfo);
 	bool getHeavy();
 	bool getSidecar();

@@ -8,7 +8,7 @@ class Bike : public Vehicle
 {
 public:
 	Bike();
-	Bike(bool a, int b) : Battery(a), Gears(b) {}
+	Bike(string regnr, string color, int wheels, VehicleType vt, bool a, int b);
 	
 	void printAttributes(bool fullInfo);
 	bool getBattery();
