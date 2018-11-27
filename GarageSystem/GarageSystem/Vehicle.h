@@ -3,12 +3,14 @@
 #include <string>
 using namespace std;
 
+class Car;
+
 enum VehicleType
 {
 	Car,
 	Motorcycle,
 	Bike,
-	Lorrey,
+	Lorry,
 	Bus
 };
 
@@ -19,6 +21,7 @@ public:
 	virtual string getColour()=0;
 	virtual int getWheels()=0;
 	string getVehicleType();
+	virtual void printAttributes(bool fullInfo);
 protected:
 	string RegNum;
 	string Colour;
@@ -29,7 +32,7 @@ protected:
 	"Car",
 	"Motorcycle",
 	"Bike",
-	"Lorrey",
+	"Lorry",
 	"Bus" };
 private:
 

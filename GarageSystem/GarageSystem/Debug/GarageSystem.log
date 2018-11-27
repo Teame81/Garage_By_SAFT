@@ -1,33 +1,3 @@
-﻿  Bike.cpp
-  Bus.cpp
-  Car.cpp
-  Garage.cpp
-c:\users\timmi\source\repos\garagesystem\garagesystem\garage.h(12): error C2259: 'Vehicle': cannot instantiate abstract class
-  c:\users\timmi\source\repos\garagesystem\garagesystem\garage.h(12): note: due to following members:
-  c:\users\timmi\source\repos\garagesystem\garagesystem\garage.h(12): note: 'std::string Vehicle::getRegNum(void)': is abstract
-  c:\users\timmi\source\repos\garagesystem\garagesystem\vehicle.h(18): note: see declaration of 'Vehicle::getRegNum'
-  c:\users\timmi\source\repos\garagesystem\garagesystem\garage.h(12): note: 'std::string Vehicle::getColour(void)': is abstract
-  c:\users\timmi\source\repos\garagesystem\garagesystem\vehicle.h(19): note: see declaration of 'Vehicle::getColour'
-  c:\users\timmi\source\repos\garagesystem\garagesystem\garage.h(12): note: 'int Vehicle::getWheels(void)': is abstract
-  c:\users\timmi\source\repos\garagesystem\garagesystem\vehicle.h(20): note: see declaration of 'Vehicle::getWheels'
-c:\users\timmi\source\repos\garagesystem\garagesystem\garage.cpp(14): error C2259: 'Vehicle': cannot instantiate abstract class
-  c:\users\timmi\source\repos\garagesystem\garagesystem\garage.cpp(14): note: due to following members:
-  c:\users\timmi\source\repos\garagesystem\garagesystem\garage.cpp(14): note: 'std::string Vehicle::getRegNum(void)': is abstract
-  c:\users\timmi\source\repos\garagesystem\garagesystem\vehicle.h(18): note: see declaration of 'Vehicle::getRegNum'
-  c:\users\timmi\source\repos\garagesystem\garagesystem\garage.cpp(14): note: 'std::string Vehicle::getColour(void)': is abstract
-  c:\users\timmi\source\repos\garagesystem\garagesystem\vehicle.h(19): note: see declaration of 'Vehicle::getColour'
-  c:\users\timmi\source\repos\garagesystem\garagesystem\garage.cpp(14): note: 'int Vehicle::getWheels(void)': is abstract
-  c:\users\timmi\source\repos\garagesystem\garagesystem\vehicle.h(20): note: see declaration of 'Vehicle::getWheels'
-  GarageSystem.cpp
-c:\users\timmi\source\repos\garagesystem\garagesystem\garage.h(12): error C2259: 'Vehicle': cannot instantiate abstract class
-  c:\users\timmi\source\repos\garagesystem\garagesystem\garage.h(12): note: due to following members:
-  c:\users\timmi\source\repos\garagesystem\garagesystem\garage.h(12): note: 'std::string Vehicle::getRegNum(void)': is abstract
-  c:\users\timmi\source\repos\garagesystem\garagesystem\vehicle.h(18): note: see declaration of 'Vehicle::getRegNum'
-  c:\users\timmi\source\repos\garagesystem\garagesystem\garage.h(12): note: 'std::string Vehicle::getColour(void)': is abstract
-  c:\users\timmi\source\repos\garagesystem\garagesystem\vehicle.h(19): note: see declaration of 'Vehicle::getColour'
-  c:\users\timmi\source\repos\garagesystem\garagesystem\garage.h(12): note: 'int Vehicle::getWheels(void)': is abstract
-  c:\users\timmi\source\repos\garagesystem\garagesystem\vehicle.h(20): note: see declaration of 'Vehicle::getWheels'
-  Lorrey.cpp
-  Motorcycle.cpp
-  Vehicle.cpp
-  Generating Code...
+﻿  Lorrey.cpp
+  LINK : C:\Users\timmi\source\repos\GarageSystem\Debug\GarageSystem.exe not found or not built by the last incremental link; performing full link
+  GarageSystem.vcxproj -> C:\Users\timmi\source\repos\GarageSystem\Debug\GarageSystem.exe

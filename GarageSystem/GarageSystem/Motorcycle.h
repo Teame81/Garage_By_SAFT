@@ -11,7 +11,7 @@ public:
 	Motorcycle();
 	Motorcycle(bool a, bool b) : Heavy(a), Sidecar(b) {}
 	~Motorcycle();
-
+	void printAttributes(bool fullInfo);
 	bool getHeavy();
 	bool getSidecar();
 

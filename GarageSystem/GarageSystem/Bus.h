@@ -9,7 +9,7 @@ public:
 	Bus();
 	Bus(int a, int b) : Seats(a), Floors(b) {}
 	~Bus();
-
+	void printAttributes(bool fullInfo);
 	int getSeats();
 
 	int getFloors();

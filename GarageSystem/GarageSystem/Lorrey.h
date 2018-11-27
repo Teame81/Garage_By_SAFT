@@ -1,13 +1,13 @@
 #pragma once
 #include <iostream>
 #include "Vehicle.h"
-class Lorrey : public Vehicle
+class Lorry : public Vehicle
 {
 public:
-	Lorrey();
-	Lorrey(float a, bool b) : Weight(a), Dangerous(b) {}
-	~Lorrey();
-
+	Lorry();
+	Lorry(float a, bool b) : Weight(a), Dangerous(b) {}
+	~Lorry();
+	void printAttributes(bool fullInfo);
 	float getWeight();
 	bool getDangerous();
 

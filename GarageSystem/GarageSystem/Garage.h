@@ -3,14 +3,15 @@
 #include "Vehicle.h"
 #include <vector>
 
-using namespace std;
+//using namespace std;
 
 class Garage
 {
 public:
 	Garage(int inmaxGarageSize); // The constructor that take how many parking spots you garage will have.
-	bool AddVehicle(Vehicle); // A method thats try to park a 'Vehicle' and return 'true' if successful.
-	void ListSpots();
+	bool addVehicle(Vehicle*); // A method thats try to park a 'Vehicle' and return 'true' if successful.
+	void listSpots(); // List whats on every parking spot
+	void typeOfVehicles(); // List the sum of the different types
 protected:
 	
 private:

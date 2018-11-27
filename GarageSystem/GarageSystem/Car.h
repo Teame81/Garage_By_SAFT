@@ -9,9 +9,9 @@ class Car : public Vehicle
 public:
 	
 	Car();
-	Car(bool a, bool b) : Convertable(a), Electric(b) {}
-	~Car();
-
+	Car(string, string ,int, VehicleType, bool a, bool b) : Convertable(a), Electric(b) {}
+	
+	void printAttributes(bool fullInfo);
 	bool getConvertable();
 	bool getElectric();
 private:

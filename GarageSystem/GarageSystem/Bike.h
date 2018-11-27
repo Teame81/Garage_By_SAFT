@@ -10,7 +10,7 @@ public:
 	Bike();
 	Bike(bool a, int b) : Battery(a), Gears(b) {}
 	
-	
+	void printAttributes(bool fullInfo);
 	bool getBattery();
 
 	int getGears();
