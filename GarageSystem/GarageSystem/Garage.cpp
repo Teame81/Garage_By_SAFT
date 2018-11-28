@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "Garage.h"
-#include <iostream>
-#include <string>
+
  
 Garage::Garage(int inMaxGarageSize)
 {
@@ -16,13 +15,25 @@ bool Garage::addVehicle(Vehicle * inVehicle)
 {
 	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
 	{
+		if ((*it) != NULL) {
+			if ((*it) == inVehicle) {
+				cout << "This Vehicle is already parked here." << endl;
+				return false;
+
+			}
+		}
+	}
+	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
+	{
+
 		if ((*it) == NULL) {
 			(*it) = inVehicle;
+			return true;
 			break;
 		}
 	}
 	
-	return true;
+	
 	
 }
 
@@ -35,7 +46,7 @@ void Garage::listSpots()
 		if ((*it) != NULL)
 		{
 			cout << i << ". ";
-			(*it)->printAttributes(false);
+			(*it)->printAttributes(true);
 		}
 		else
 		{
@@ -92,4 +103,9 @@ void Garage::typeOfVehicles()
 	cout << "Lorry(s): " << nrOfLorrys << endl;
 	cout << "Motorcycle(s): " << nrOfMotorcycle << endl;
 
+}
+
+void Garage::retractVehicle(int vehicleToRemove)
+{
+	delete parkingSpots->at(vehicleToRemove - 1);
 }

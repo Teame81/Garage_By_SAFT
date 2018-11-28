@@ -1,2 +1,7 @@
 ﻿  Garage.cpp
+  GarageSystem.cpp
+c:\users\timmi\source\repos\garagesystem\garagesystem\garagesystem.cpp(203): warning C4154: deletion of an array expression; conversion to pointer supplied
+c:\users\timmi\source\repos\garagesystem\garagesystem\garagesystem.cpp(208): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+c:\users\timmi\source\repos\garagesystem\garagesystem\garage.cpp(38): warning C4715: 'Garage::addVehicle': not all control paths return a value
   GarageSystem.vcxproj -> C:\Users\timmi\source\repos\GarageSystem\Debug\GarageSystem.exe

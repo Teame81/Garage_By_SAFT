@@ -21,7 +21,7 @@ public:
 	string getColour();
 	int getWheels();
 	string getVehicleType();
-	virtual void printAttributes(bool fullInfo);
+	virtual void printAttributes(bool fullInfo)=0;
 protected:
 	string RegNum;
 	string Colour;
