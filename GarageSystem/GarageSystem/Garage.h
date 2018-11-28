@@ -7,7 +7,7 @@
 #include "Bus.h"
 #include "Lorrey.h"
 #include "Motorcycle.h"
-//using namespace std;
+
 
 
 class Garage
@@ -18,6 +18,8 @@ public:
 	void listSpots(); // List whats on every parking spot
 	void typeOfVehicles(); // List the sum of the different types
 	void retractVehicle(int); // Retracts vehicle from parking spot
+	void searchWheelsPlusFour();
+	//void searchBattery();
 	
 protected:
 	

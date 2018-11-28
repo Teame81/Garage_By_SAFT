@@ -15,14 +15,20 @@ bool Garage::addVehicle(Vehicle * inVehicle)
 {
 	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
 	{
+		if (inVehicle == NULL)
+		{
+			cout << "This car don't exist!" << endl;
+			break;
+		}
 		if ((*it) != NULL) {
-			if ((*it) == inVehicle) {
+			if (inVehicle ==(*it)) {
 				cout << "This Vehicle is already parked here." << endl;
 				return false;
 
 			}
 		}
 	}
+
 	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
 	{
 
@@ -109,3 +115,35 @@ void Garage::retractVehicle(int vehicleToRemove)
 {
 	delete parkingSpots->at(vehicleToRemove - 1);
 }
+
+
+void Garage::searchWheelsPlusFour()
+{
+	int Wheels = 0;
+	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
+	{
+		if (*it != NULL) {
+			if ((*it)->getWheels() > 2)
+			{
+				Wheels++;
+			}
+		}
+
+	}
+	cout << "There are " << Wheels << " vehicles that has more than two wheels" << endl;
+}
+
+//void Garage::searchBattery()
+//{
+//	int Battery = 0;
+//	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
+//	{
+//		if (*it != NULL) {
+//			if ((*it)->getBattery())
+//			{
+//				Battery++;
+//			}
+//		}
+//	}
+//	cout << "There are " << Battery << " vehicles that has more than two wheels" << endl;
+//}
