@@ -6,9 +6,9 @@
 Garage::Garage(int inMaxGarageSize)
 {
 	maxGarageSize = inMaxGarageSize;
-	for (int i{0}; i <= maxGarageSize; ++i)
+	for (int i{0}; i < maxGarageSize; ++i)
 	{
-		parkingSpots->push_back(pEmpty);
+		parkingSpots->push_back(NULL);
 	}
 }
 
@@ -16,8 +16,9 @@ bool Garage::addVehicle(Vehicle * inVehicle)
 {
 	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
 	{
-		if ((*it) == pEmpty) {
+		if ((*it) == NULL) {
 			(*it) = inVehicle;
+			break;
 		}
 	}
 	
@@ -27,9 +28,20 @@ bool Garage::addVehicle(Vehicle * inVehicle)
 
 void Garage::listSpots()
 {
-	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
+	int i = 1;
+	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++, i++)
 	{
-		(*it)->printAttributes(false);
+		
+		if ((*it) != NULL)
+		{
+			cout << i << ". ";
+			(*it)->printAttributes(false);
+		}
+		else
+		{
+			cout << i << ". ";
+			cout << "Empty spot" << endl;
+		}
 	}
 }
 
@@ -45,31 +57,32 @@ void Garage::typeOfVehicles()
 
 	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
 	{
-		
-		if ((*it)->getVehicleType() == "Car")
-		{
-			nrOfCars++;
-		}else if ((*it)->getVehicleType() == "Bike")
-		{
-			nrOfBikes++;
-		}else if ((*it)->getVehicleType() == "Bus")
-		{
-			nrOfBuses++;
+		if(*it != NULL){
+			if ((*it)->getVehicleType() == "Car")
+			{
+				nrOfCars++;
+			}else if ((*it)->getVehicleType() == "Bike")
+			{
+				nrOfBikes++;
+			}else if ((*it)->getVehicleType() == "Bus")
+			{
+				nrOfBuses++;
+			}
+			else if ((*it)->getVehicleType() == "Lorry")
+			{
+				nrOfLorrys++;
+			}
+			else if ((*it)->getVehicleType() == "Motorcycle")
+			{
+				nrOfMotorcycle++;
+			}else
+			{
+				nrOfUnknown++;
+			}
 		}
-		else if ((*it)->getVehicleType() == "Lorry")
-		{
-			nrOfLorrys++;
-		}
-		else if ((*it)->getVehicleType() == "Motorcycle")
-		{
-			nrOfMotorcycle++;
-		}
-		else if (*it == NULL)
+		else
 		{
 			nrOfEmptySpots++;
-		}else
-		{
-			nrOfUnknown++;
 		}
 	}
 

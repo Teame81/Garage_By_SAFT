@@ -7,7 +7,6 @@ class Car;
 
 enum VehicleType
 {	
-	EMPTY,
 	CAR,
 	MOTORCYCLE,
 	BIKE,
@@ -30,7 +29,6 @@ protected:
 	VehicleType vehicleType;
 
 	string TypeName[5] = {
-	"Empty"
 	"Car",
 	"Motorcycle",
 	"Bike",
