@@ -8,8 +8,7 @@ class Car : public Vehicle
 {
 public:
 	
-	Car(string, string, int, VehicleType, bool, bool ); 
-	//string register number, string color, int wheels, EnumVehiclettype, bool Convertible, bool Electric
+	Car(string, string, int, VehicleType, bool, bool ); //string register number, string color, int wheels, EnumVehiclettype, bool Convertible, bool Electric
 	
 	void printAttributes(bool fullInfo);
 	bool getConvertable();

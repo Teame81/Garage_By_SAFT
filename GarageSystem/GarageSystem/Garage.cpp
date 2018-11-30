@@ -39,8 +39,6 @@ bool Garage::addVehicle(Vehicle * inVehicle)
 		}
 	}
 	
-	
-	
 }
 
 void Garage::listSpots()
@@ -113,11 +111,35 @@ void Garage::typeOfVehicles()
 
 void Garage::retractVehicle(int vehicleToRemove)
 {
-	delete parkingSpots->at(vehicleToRemove - 1);
+	parkingSpots->at(vehicleToRemove - 1) = NULL;
 }
 
 
-void Garage::searchWheelsPlusFour()
+void Garage::searchRegisterNumber()
+{
+	bool isCarInGarage = false;
+	cout << "Enter registernumber: ";
+	string inVehicleNr;
+	cin.ignore();
+	getline(cin, inVehicleNr);
+	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
+	{
+		if (*it != NULL) {
+			if ((*it)->getRegNum() == inVehicleNr)
+			{
+				isCarInGarage = true;
+				cout << (*it)->getRegNum() << " is parked here." << endl;
+			}
+		}
+
+	}
+	if (isCarInGarage == false)
+	{
+		cout << "That car isn't parked here." << endl;
+	}
+}
+
+void Garage::searchWheelsMoreThenTwo()
 {
 	int Wheels = 0;
 	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
@@ -133,17 +155,67 @@ void Garage::searchWheelsPlusFour()
 	cout << "There are " << Wheels << " vehicles that has more than two wheels" << endl;
 }
 
-//void Garage::searchBattery()
-//{
-//	int Battery = 0;
-//	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
-//	{
-//		if (*it != NULL) {
-//			if ((*it)->getBattery())
-//			{
-//				Battery++;
-//			}
-//		}
-//	}
-//	cout << "There are " << Battery << " vehicles that has more than two wheels" << endl;
-//}
+void Garage::searchBattery()
+{
+	int Battery = 0;
+
+	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
+	{
+		if (*it != NULL) 
+		{
+			Car * inCar = dynamic_cast<Car *>((*it));
+			if (inCar != nullptr)
+			{
+				if (inCar->getElectric())
+				{
+					Battery++;
+				}
+			}
+		}
+	}
+	cout << "There are " << Battery << " car that runs on a electrical motor(s)." << endl;
+}
+
+void Garage::searchConvertable()
+{
+	int Convertable = 0;
+
+	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
+	{
+		if (*it != NULL)
+		{
+			Car * inCar = dynamic_cast<Car *>((*it));
+			if (inCar != nullptr)
+			{
+				if (inCar->getConvertable())
+				{
+					Convertable++;
+				}
+			}
+		}
+	}
+	cout << "There are " << Convertable << " convertible(s)." << endl;
+	
+}
+
+void Garage::searchLorry()
+{
+	int nrOfLorrys = 0;
+
+	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
+	{
+		if (*it != NULL)
+		{
+			Lorry * inLorry = dynamic_cast<Lorry *>((*it));
+			if (inLorry != nullptr)
+			{
+				nrOfLorrys++;
+				cout << nrOfLorrys<< ". " << inLorry->getRegNum() << endl;
+				cout << "Weight: " << inLorry->getWeight() << endl;
+				cout << ((inLorry->getDangerous()) ? "Do " : "Don't ") << "have dangerous cargo." << endl;
+
+			}
+		}
+	}
+	cout << "There are " << nrOfLorrys << " in the garage" << endl;
+}

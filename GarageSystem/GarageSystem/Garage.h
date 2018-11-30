@@ -18,9 +18,16 @@ public:
 	void listSpots(); // List whats on every parking spot
 	void typeOfVehicles(); // List the sum of the different types
 	void retractVehicle(int); // Retracts vehicle from parking spot
-	void searchWheelsPlusFour();
-	//void searchBattery();
+	//General Vehicles search
+	void searchRegisterNumber();//Search for a vehicle with a certain regnumber 
+	void searchWheelsMoreThenTwo();// Search for vehicles with more then two wheels
+	//Car specific searches
+	void searchBattery();// Search the Vector and checks for cars with batteries
+	void searchConvertable(); // Search the vector for cars with convertibles
+	//Lorry Info
+	void searchLorry(); // Gives info about parked lorries
 	
+
 protected:
 	
 private:
