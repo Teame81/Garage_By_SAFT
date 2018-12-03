@@ -1,10 +1,21 @@
 #include "pch.h"
 #include "Garage.h"
-
  
-Garage::Garage(int inMaxGarageSize)
+Garage::Garage()
 {
-	maxGarageSize = inMaxGarageSize;
+	/* To be in final release
+	cout << "Welcome to SAFT the garage management software that makes the rest looks like pest " << endl;
+	cout << "Please enter the name of your garage: ";
+	getline(cin, GarageName);
+	do 
+	{
+	cout << endl << "Enter how many parkingspots in your garage: ";
+	cin >> maxGarageSize;
+	} while (maxGarageSize < 1);
+	*/
+	GarageName = "Timpas garage";
+	maxGarageSize = 12;
+
 	for (int i{0}; i < maxGarageSize; ++i)
 	{
 		parkingSpots->push_back(NULL);
@@ -13,6 +24,19 @@ Garage::Garage(int inMaxGarageSize)
 
 bool Garage::addVehicle(Vehicle * inVehicle)
 {
+	int i{ 0 };
+	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
+	{
+		if (*it != NULL)
+		{
+			i++;
+		}
+	}
+	if (i == maxGarageSize)
+	{
+		cout << "Garage full!" << endl;
+	}
+
 	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
 	{
 		if (inVehicle == NULL)
@@ -114,6 +138,10 @@ void Garage::retractVehicle(int vehicleToRemove)
 	parkingSpots->at(vehicleToRemove - 1) = NULL;
 }
 
+std::string Garage::getGarageName()
+{
+	return GarageName;
+}
 
 void Garage::searchRegisterNumber()
 {

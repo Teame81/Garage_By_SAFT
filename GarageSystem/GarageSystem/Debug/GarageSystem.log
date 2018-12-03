@@ -1,4 +1,3 @@
 ﻿  GarageSystem.cpp
-c:\users\timmi\source\repos\garagesystem\garagesystem\garagesystem.cpp(200): warning C4154: deletion of an array expression; conversion to pointer supplied
-c:\users\timmi\source\repos\garagesystem\garagesystem\garagesystem.cpp(205): warning C4018: '<': signed/unsigned mismatch
+c:\users\timmi\source\repos\garagesystem\garagesystem\garagesystem.cpp(247): warning C4018: '<': signed/unsigned mismatch
   GarageSystem.vcxproj -> C:\Users\timmi\source\repos\GarageSystem\Debug\GarageSystem.exe

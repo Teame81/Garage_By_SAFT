@@ -8,16 +8,15 @@
 #include "Lorrey.h"
 #include "Motorcycle.h"
 
-
-
 class Garage
 {
 public:
-	Garage(int inmaxGarageSize); // The constructor that take how many parking spots you garage will have.
+	Garage(); // The constructor that take how many parking spots you garage will have.
 	bool addVehicle(Vehicle*); // A method thats try to park a 'Vehicle' and return 'true' if successful.
 	void listSpots(); // List whats on every parking spot
 	void typeOfVehicles(); // List the sum of the different types
 	void retractVehicle(int); // Retracts vehicle from parking spot
+	string getGarageName();
 	//General Vehicles search
 	void searchRegisterNumber();//Search for a vehicle with a certain regnumber 
 	void searchWheelsMoreThenTwo();// Search for vehicles with more then two wheels
@@ -26,11 +25,11 @@ public:
 	void searchConvertable(); // Search the vector for cars with convertibles
 	//Lorry Info
 	void searchLorry(); // Gives info about parked lorries
-	
 
 protected:
 	
 private:
+	string GarageName;
 	int maxGarageSize{}; // The max size/spots of the garage
 	vector<Vehicle *> * parkingSpots = new vector<Vehicle *>{}; // A pointer to a vector that contains pointers of 'Vehicle's 
 	

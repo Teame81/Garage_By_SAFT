@@ -6,14 +6,14 @@ Bike::Bike()
 {
 }
 
-Bike::Bike(string regnr, string color, int wheels, VehicleType vt, bool a, int b)
+Bike::Bike(string regnr, string color, int wheels, VehicleType vt, bool inBattery, int inGears)
 {
 	RegNum = regnr;
 	Colour = color;
 	Wheels = wheels;
 	vehicleType = vt;
-	Battery=a;
-	Gears=b;
+	Battery = inBattery;
+	Gears = inGears;
 }
 
 
@@ -26,7 +26,7 @@ void Bike::printAttributes(bool fullInfo)
 	{
 		cout << "Wheels:" << Wheels << endl;
 		cout << "Battery:" << ((Battery)?"Yes":"No") << endl;
-		cout << "Gears"<<Gears << endl << endl;
+		cout << "Gears: "<<Gears << endl << endl;
 	}
 }
 
