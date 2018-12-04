@@ -45,6 +45,9 @@
     <ClInclude Include="Vehicle.h">
       <Filter>Source Files\Classes\Garage</Filter>
     </ClInclude>
+    <ClInclude Include="Transportstyrelsen.h">
+      <Filter>Source Files\Classes\Garage</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -72,6 +75,9 @@
       <Filter>Source Files\Classes\Garage</Filter>
     </ClCompile>
     <ClCompile Include="Vehicle.cpp">
+      <Filter>Source Files\Classes\Garage</Filter>
+    </ClCompile>
+    <ClCompile Include="Transportstyrelsen.cpp">
       <Filter>Source Files\Classes\Garage</Filter>
     </ClCompile>
   </ItemGroup>

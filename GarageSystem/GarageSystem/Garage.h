@@ -15,7 +15,7 @@ public:
 	bool addVehicle(Vehicle*); // A method thats try to park a 'Vehicle' and return 'true' if successful.
 	void listSpots(); // List whats on every parking spot
 	void typeOfVehicles(); // List the sum of the different types
-	void retractVehicle(int); // Retracts vehicle from parking spot
+	bool retractVehicle(int); // Retracts vehicle from parking spot
 	string getGarageName();
 	//General Vehicles search
 	void searchRegisterNumber();//Search for a vehicle with a certain regnumber 

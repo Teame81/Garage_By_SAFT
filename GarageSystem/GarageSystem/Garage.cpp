@@ -1,5 +1,7 @@
 #include "pch.h"
 #include "Garage.h"
+
+string StringToCapital(string text);
  
 Garage::Garage()
 {
@@ -35,6 +37,7 @@ bool Garage::addVehicle(Vehicle * inVehicle)
 	if (i == maxGarageSize)
 	{
 		cout << "Garage full!" << endl;
+		return false;
 	}
 
 	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
@@ -42,6 +45,7 @@ bool Garage::addVehicle(Vehicle * inVehicle)
 		if (inVehicle == NULL)
 		{
 			cout << "This car don't exist!" << endl;
+			return false;
 			break;
 		}
 		if ((*it) != NULL) {
@@ -133,16 +137,22 @@ void Garage::typeOfVehicles()
 
 }
 
-void Garage::retractVehicle(int vehicleToRemove)
+bool Garage::retractVehicle(int vehicleToRemove)
 {
-	parkingSpots->at(vehicleToRemove - 1) = NULL;
+	if (parkingSpots->at(vehicleToRemove-1) == NULL)
+	{
+		return false;
+	}else
+	{
+		parkingSpots->at(vehicleToRemove - 1) = NULL;
+		return true;
+	}
 }
 
 std::string Garage::getGarageName()
 {
 	return GarageName;
 }
-
 void Garage::searchRegisterNumber()
 {
 	bool isCarInGarage = false;
@@ -150,6 +160,7 @@ void Garage::searchRegisterNumber()
 	string inVehicleNr;
 	cin.ignore();
 	getline(cin, inVehicleNr);
+	inVehicleNr = StringToCapital(inVehicleNr);
 	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
 	{
 		if (*it != NULL) {
