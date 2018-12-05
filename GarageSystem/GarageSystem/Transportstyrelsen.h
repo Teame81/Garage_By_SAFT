@@ -5,10 +5,12 @@
 class Transportstyrelsen
 {
 public:
-	vector<Vehicle *> * TransportStyrelsenDatabaseInfo = new vector<Vehicle *>;
+	vector<Vehicle *> * TransportStyrelsenDatabaseInfo = new vector<Vehicle *>{};
 	Transportstyrelsen();
+	~Transportstyrelsen();
+	void listTransportStyrelsenDatabase();
+	void addToTransportStyrelsensDatabase();
 
-	//~Transportstyrelsen();
 
 private:
 

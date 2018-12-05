@@ -12,6 +12,7 @@ class Garage
 {
 public:
 	Garage(); // The constructor that take how many parking spots you garage will have.
+	~Garage();
 	bool addVehicle(Vehicle*); // A method thats try to park a 'Vehicle' and return 'true' if successful.
 	void listSpots(); // List whats on every parking spot
 	void typeOfVehicles(); // List the sum of the different types

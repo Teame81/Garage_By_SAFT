@@ -1,2 +1,4 @@
-﻿  Transportstyrelsen.cpp
+﻿  GarageSystem.cpp
+c:\users\timmi\source\repos\garagesystem\garagesystem\garagesystem.cpp(230): warning C4018: '<': signed/unsigned mismatch
+  LINK : C:\Users\timmi\source\repos\GarageSystem\Debug\GarageSystem.exe not found or not built by the last incremental link; performing full link
   GarageSystem.vcxproj -> C:\Users\timmi\source\repos\GarageSystem\Debug\GarageSystem.exe

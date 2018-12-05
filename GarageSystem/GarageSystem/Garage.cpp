@@ -24,6 +24,19 @@ Garage::Garage()
 	}
 }
 
+Garage::~Garage()
+{
+	cout << "Unloading garage from memory: " << endl;
+	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
+	{
+		if (*it != NULL)
+		{
+			delete (*it);
+		}
+	}
+	cout << "Done!" << endl;
+}
+
 bool Garage::addVehicle(Vehicle * inVehicle)
 {
 	int i{ 0 };
@@ -83,7 +96,7 @@ void Garage::listSpots()
 		else
 		{
 			cout << i << ". ";
-			cout << "Empty spot" << endl;
+			cout << "Empty spot" << endl << endl;
 		}
 	}
 }
@@ -139,13 +152,20 @@ void Garage::typeOfVehicles()
 
 bool Garage::retractVehicle(int vehicleToRemove)
 {
-	if (parkingSpots->at(vehicleToRemove-1) == NULL)
+	if (vehicleToRemove < maxGarageSize) {
+		if (parkingSpots->at(vehicleToRemove - 1) == NULL)
+		{
+			return false;
+		}
+		else
+		{
+			parkingSpots->at(vehicleToRemove - 1) = NULL;
+			return true;
+		}
+	}
+	else
 	{
 		return false;
-	}else
-	{
-		parkingSpots->at(vehicleToRemove - 1) = NULL;
-		return true;
 	}
 }
 
