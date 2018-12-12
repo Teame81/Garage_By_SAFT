@@ -5,7 +5,7 @@ string StringToCapital(string text);
  
 Garage::Garage()
 {
-	/* To be in final release
+	
 	cout << "Welcome to SAFT the garage management software that makes the rest looks like pest " << endl;
 	cout << "Please enter the name of your garage: ";
 	getline(cin, GarageName);
@@ -14,27 +14,22 @@ Garage::Garage()
 	cout << endl << "Enter how many parkingspots in your garage: ";
 	cin >> maxGarageSize;
 	} while (maxGarageSize < 1);
-	*/
-	GarageName = "Timpas garage";
-	maxGarageSize = 12;
+	
+
 
 	for (int i{0}; i < maxGarageSize; ++i)
 	{
 		parkingSpots->push_back(NULL);
 	}
+
+	
 }
 
 Garage::~Garage()
 {
 	cout << "Unloading garage from memory: " << endl;
-	for (vector<Vehicle*>::iterator it = parkingSpots->begin(); it != parkingSpots->end(); it++)
-	{
-		if (*it != NULL)
-		{
-			delete (*it);
-		}
-	}
-	cout << "Done!" << endl;
+	parkingSpots->clear();
+	cout << "Done with garage!" << endl;
 }
 
 bool Garage::addVehicle(Vehicle * inVehicle)
@@ -63,7 +58,7 @@ bool Garage::addVehicle(Vehicle * inVehicle)
 		}
 		if ((*it) != NULL) {
 			if (inVehicle ==(*it)) {
-				cout << "This Vehicle is already parked here." << endl;
+
 				return false;
 
 			}

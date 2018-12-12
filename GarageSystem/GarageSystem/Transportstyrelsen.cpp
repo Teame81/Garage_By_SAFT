@@ -43,12 +43,13 @@ Transportstyrelsen::~Transportstyrelsen()
 	cout << "Unloading transportstyrelsen database: " << endl;
 	for (vector<Vehicle*>::iterator it = TransportStyrelsenDatabaseInfo->begin(); it != TransportStyrelsenDatabaseInfo->end(); it++)
 	{
-	/*	if (*it != NULL || (*it) != nullptr)
+	  if (*it != NULL)
 		{
 			delete (*it);
-		}*/
+		}
 	}
-	cout << "Done." << endl;
+	TransportStyrelsenDatabaseInfo->clear();
+	cout << "Done with transportsyrelsen." << endl;
 }
 
 void Transportstyrelsen::listTransportStyrelsenDatabase()

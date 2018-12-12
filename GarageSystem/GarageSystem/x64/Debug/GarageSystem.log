@@ -1,0 +1,3 @@
+﻿  Garage.cpp
+c:\users\mimmsan\source\repos\garage_by_saft\garagesystem\garagesystem\garage.cpp(77): warning C4715: 'Garage::addVehicle': not all control paths return a value
+  GarageSystem.vcxproj -> C:\Users\Mimmsan\Source\Repos\Garage_By_SAFT\GarageSystem\x64\Debug\GarageSystem.exe
